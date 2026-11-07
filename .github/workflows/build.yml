@@ -19,6 +19,9 @@ jobs:
           distribution: 'zulu'
           java-version: '17'
 
+      - name: Create missing .env.example if not present
+        run: touch .env.example
+
       - name: Setup Gradle Engine
         uses: gradle/actions/setup-gradle@v4
 
